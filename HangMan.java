@@ -5,6 +5,8 @@ public class Hangman {
 
     public void setWord(String word) {
         word = inputName;
+        
+        //bryan made changes here
     }
 
     public void setOutput(String outputStr) {
