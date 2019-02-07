@@ -1,4 +1,7 @@
 import javax.swing.JOptionPane;
+
+import com.sun.tools.javac.util.StringUtils;
+
 import java.lang.String;
 import java.lang.Integer;
 
@@ -26,14 +29,14 @@ public class HangManMain {
             Hangman currentGame = new Hangman();
             String word = setRandWord();
             setWord(word);
-            setOutput("_" * (word.lenght() + 1));
+            setOutput(StringUtils.repeat("_", (word.length() + 1)));
             playGame();
         }
         if (choice == 2) {
             Hangman currentGame = new Hangman();
             String word = JOptionPane.showInputDialog("Player 2 enter a word:");
             setWord(word);
-            setOutput("_" * (word.lenght() + 1));
+            setOutput(StringUtils.repeat("_", (word.length() + 1)));
             playGame();
         }
         if (choice == 3) {
@@ -44,6 +47,7 @@ public class HangManMain {
     }
 
     public static void playGame() {
+
         /*
          * runs game until 6 strikes or no _ in output
          * 
