@@ -11,4 +11,20 @@ public class Hangman {
         output = outputStr;
     }
 
+    public void addLetter(char letter){
+        lettersGuessed.add(letter)
+    }
+
+    public String getWord() {
+        return word;
+    }
+
+    public String getOutput() {
+        return output;
+    }
+
+    public List getLettersGuessed() {
+        return lettersGuessed;
+    }
+
 }
