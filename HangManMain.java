@@ -47,7 +47,6 @@ public class HangManMain {
     }
 
     public static void playGame() {
-
         /*
          * runs game until 6 strikes or no _ in output
          * 
@@ -55,7 +54,43 @@ public class HangManMain {
          * check if guessed letter is in the word, use function to update output if
          * guessed letter is in word
          */
+        int strikes = 0;
+        while (strikes < 6 && wordGuessed() == false) {
+            char guess = JOptionPane.showInputDialog("Enter a new letter:");
+            if (alreadyGuessed(guess) == false) {
+                if (inWord(guess) == true) {
+                    updateOutput(guess);
+                } else {
+                    strikes++;
+                }
+                String output = getOutput();
+                JOptionPane.showMessageDialog(null, "Strikes:" + strikes + "\n" + output);
+            }
 
+        }
     }
 
+    public static Boolean wordGuessed() {
+        String wordSoFar = getOutput();
+        for (int i = 0; i < wordSoFar.length(); i++) {
+            if (wordSoFar.charAt(i) == '_') {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static Boolean inWord(char letter) {
+        // checks if letter entered by the user is in the word
+    }
+
+    public static Boolean alreadyGuessed(char letter) {
+        // checks if letter entered by the user is in the list of guessed letters
+    }
+
+    public static void updateOutput(char letter) {
+        // runs after inWord has returned true and alreadyGuessed has returned false
+        // replaces blanks in the output string with the correctly guessed letter as
+        // necessary
+    }
 }
