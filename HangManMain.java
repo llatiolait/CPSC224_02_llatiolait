@@ -93,4 +93,8 @@ public class HangManMain {
         // replaces blanks in the output string with the correctly guessed letter as
         // necessary
     }
+
+    public static String setRandWord() {
+        // returns a randomly chosen word
+    }
 }
