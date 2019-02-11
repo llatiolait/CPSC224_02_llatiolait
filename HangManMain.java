@@ -64,7 +64,10 @@ public class HangManMain {
                     strikes++;
                 }
                 String output = getOutput();
-                JOptionPane.showMessageDialog(null, "Strikes:" + strikes + "\n" + output);
+                JOptionPane.showMessageDialog(null,
+                        "** HANGMAN**" + "\n" + "**************" + "\n" + "----------------------" + "\n" + output
+                                + "\n" + "**************" + "\n" + "----------------------" + "\n" + "Strikes:"
+                                + strikes);
             }
 
         }
